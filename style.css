@@ -1,0 +1,66 @@
+body {
+  background: url(https://img.freepik.com/free-vector/heart-background-illustration_53876-82136.jpg?w=1480&t=st=1707867646~exp=1707868246~hmac=e95fd711587a6770821e38e242b0de375be4e17e94da47741a1c56e7b470444b) center/cover no-repeat;
+  margin: 0; /* Remove default body margin */
+}
+
+h2 {
+  font-family: 'Impact';
+  font-size: 5em;
+  position: relative;
+  top: 325px;
+  background: url(https://i.pinimg.com/564x/b9/3b/8c/b93b8c3033d53f8907f5d165c893d67b.jpg) center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: red;
+  filter: drop-shadow(1px 2px 0px rgba(25, 25, 25, .75));
+}
+
+#wrap {
+  position: relative;
+  width: 395px; /* Set the width to 395 pixels */
+  height: 791px; /* Set the height to 791 pixels */
+  margin: auto;
+}
+
+.heart {
+  background-color: hotpink;
+  display: inline-block;
+  height: 100px;
+  margin: 0px 25px 10px;
+  position: absolute;
+  top: 125px;
+  left: 250px;
+  transform: rotate(-45deg);
+  width: 100px;
+  z-index: 5;
+  animation: pulse 1.25s ease infinite;
+  filter: drop-shadow(1px 2px 0px rgba(25, 25, 25, .75));
+}
+
+@keyframes pulse {
+  0% { transform: rotate(-45deg) scale(1.5); }
+  25% { transform: rotate(-45deg) scale(1.66); }
+  50% { transform: rotate(-45deg) scale(1.75); }
+  100% { transform: rotate(-45deg) scale(1.5); }
+}
+
+.heart:before, .heart:after {
+  content: "";
+  background-color: hotpink;
+  border-radius: 50%;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+}
+
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart:after {
+  top: 0;
+  left: 50px;
+  filter: drop-shadow(1px 2px -1px rgba(25, 25, 25, .75));
+}
+
